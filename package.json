@@ -1,0 +1,19 @@
+{
+  "name": "cls-sequelize-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cls-bluebird": "^1.0.0",
+    "continuation-local-storage": "^3.1.4",
+    "express": "~3.4.5",
+    "lodash": "^3.8.0",
+    "mysql": "^2.4.0",
+    "sequelize": "^2.0.4"
+  }
+}

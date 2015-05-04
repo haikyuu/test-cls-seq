@@ -1,0 +1,8 @@
+{
+  "NODE_ENV": "dev",
+  "MYSQL_URI": "localhost",
+  "MYSQL_DB": "test_cls",
+  "MYSQL_USER": "root",
+  "MYSQL_PASSWORD": "root",
+  "MYSQL_PORT": 3308
+}
