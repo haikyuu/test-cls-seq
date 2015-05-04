@@ -1,12 +1,13 @@
 var config = require('./config.json');
-
+var cls = require('continuation-local-storage');
 
 var path = require('path');
 var lodash = require('lodash');
 var fs = require('fs');
 
+var ns = cls.getNamespace('test');
 var Sequelize = require('sequelize');
-
+Sequelize.cls = ns;
 
 var sequelize = new Sequelize(config.MYSQL_DB, config.MYSQL_USER, config.MYSQL_PASSWORD, {
   logging: false,
@@ -19,8 +20,6 @@ var db = {};
 
 sequelize.sync({
   force: false
-}).then(function() {
-  console.log('database sync.');
 });
 
 fs.readdirSync(__dirname)
