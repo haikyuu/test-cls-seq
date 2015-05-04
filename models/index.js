@@ -1,13 +1,13 @@
 var config = require('./config.json');
 var cls = require('continuation-local-storage');
-var patcher = require('cls-bluebird');
 
 var path = require('path');
 var lodash = require('lodash');
 var fs = require('fs');
 
+var ns = cls.getNamespace('test');
 var Sequelize = require('sequelize');
-
+Sequelize.cls = ns;
 
 var ns = cls.createNamespace('index');
 patcher(ns);
@@ -21,6 +21,9 @@ ns.run(function() {
   });
   ns.set('number', 888888);
 
+sequelize.sync({
+  force: false
+});
 
   var db = {};
 
