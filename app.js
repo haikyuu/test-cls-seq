@@ -14,7 +14,7 @@ app.configure(function() {
 
     number++;
     var ns = cls.createNamespace('test');
-    // patcher(ns);
+    patcher(ns);
     ns.bindEmitter(req);
     ns.bindEmitter(res);
     ns.run(function() {
